@@ -4,129 +4,191 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Personal Portfolio</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom Script -->
+    <script defer src="script.js"></script>
+
     <style>
-        html {
-            scroll-behavior: smooth;
+        .dark-mode {
+            background-color: #121212;
+            color: #f4f4f4;
         }
 
-        .hero {
-            background-color: #343a40;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
+        .dark-mode section {
+            background: #1e1e1e;
         }
 
-        .projects img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
+        .dark-mode header {
+            background-color: #000;
+        }
+
+        .dark-mode table,
+        .dark-mode th,
+        .dark-mode td {
+            border-color: #777;
+        }
+
+        img.profile {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .dark-mode,
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode h3,
+        .dark-mode p,
+        .dark-mode li,
+        .dark-mode th,
+        .dark-mode td {
+            color: #f4f4f4 !important;
+        }
+
+        .dark-mode .bg-white {
+            background-color: #1e1e1e !important;
+        }
+
+        .dark-mode .table-bordered {
+            border-color: #141313;
+        }
+
+        .dark-mode .table th,
+        .dark-mode .table td {
+            border-color: #141313;
         }
     </style>
 </head>
 
-<body>
+<body class="p-3">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">MyPortfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+    <!-- Header -->
+    <header class="text-center p-4 bg-dark text-white rounded mb-4">
+        <h1>Nallapu Rishith Reddy</h1>
+        <img src="images/patient.png" alt="Profile Image" class="profile my-3" />
+        <div>
+            <button id="toggleMode" class="btn btn-outline-light mt-2">Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Contact Info -->
+        <section class="mb-4 p-4 bg-white rounded shadow">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> nallapurishithreddy@gmail.com</p>
+            <p><strong>Mobile:</strong> 6305257250</p>
+        </section>
+
+        <!-- Career Objective -->
+        <section class="mb-4 p-4 bg-white rounded shadow">
+            <h2>Career Objective</h2>
+            <p>To secure a challenging position in a reputable organization to expand my learnings, knowledge, and
+                skills.</p>
+        </section>
+
+        <!-- Academic Info -->
+        <section class="mb-4 p-4 bg-white rounded shadow">
+            <h2>Academic Information</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                            <th>Percentage/CGPA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>B.Tech</td>
+                            <td>KMIT</td>
+                            <td>2026</td>
+                            <td>8.9 CGPA</td>
+                        </tr>
+                        <tr>
+                            <td>Intermediate</td>
+                            <td>SR college</td>
+                            <td>2023</td>
+                            <td>9.8 CGPA</td>
+                        </tr>
+                        <tr>
+                            <td>SSC</td>
+                            <td>Shine High School</td>
+                            <td>2020</td>
+                            <td>10.0 CGPA</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Hello, I'm Rishith Reddy</h1>
-            <p class="lead">Web Developer | JavaScript Enthusiast | Open Source Lover</p>
-            <a href="#contact" class="btn btn-primary">Contact Me</a>
-        </div>
-    </section>
+        <!-- Technical Skills -->
+        <section class="mb-4 p-4 bg-white rounded shadow">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> C, C++, Java, Python, C#</li>
+                <li><strong>Databases:</strong> MySQL, MongoDB</li>
+                <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript, React</li>
+            </ul>
+        </section>
 
-    <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">About Me</h2>
-            <p class="text-center">I'm a passionate developer who loves turning ideas into reality with code. Skilled in
-                JavaScript, Bootstrap, and backend technologies.</p>
-        </div>
-    </section>
+        <!-- Projects -->
+        <section class="mb-4 p-4 bg-white rounded shadow">
+            <h2>Projects</h2>
+            <ol>
+                <li><strong>Feed The Needy:</strong> A web-based application to feed food to those in need.</li>
+                <li><strong>NAARI:</strong> An Android application to ensure the safety of women.</li>
+            </ol>
+        </section>
 
-    <section id="projects" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Projects</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/02_online-marketing.gif" alt="Project 1" class="card-img-top" />
-                        <div class="card-body">
-                            <h5 class="card-title">Project One</h5>
-                            <p class="card-text">Stock market prediction</p>
-                            <a href="#" class="btn btn-outline-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/621405faf156b68381c89877_Untitled design.gif"Project 1" class="card-img-top" />
-                        <div class="card-body">
-                            <h5 class="card-title">Project two</h5>
-                            <p class="card-text">Online marketing for business</p>
-                            <a href="#" class="btn btn-outline-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/images.jpeg" alt="Project 1" class="card-img-top" />
-                        <div class="card-body">
-                            <h5 class="card-title">Project three</h5>
-                            <p class="card-text">search engine optimization</p>
-                            <a href="#" class="btn btn-outline-primary">View</a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Achievements -->
+        <section class="mb-4 p-4 bg-white rounded shadow">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Certificate on Python learning and project completion</li>
+            </ul>
+        </section>
+
+        <!-- Strengths -->
+        <section class="mb-4 p-4 bg-white rounded shadow">
+            <h2>Strengths</h2>
+            <ul>
+                <li>Self-motivated</li>
+                <li>Team Player</li>
+                <li>Quick Learner</li>
+            </ul>
+        </section>
+
+        <!-- Personal Profile -->
+        <section class="mb-4 p-4 bg-white rounded shadow">
+            <h2>Personal Profile</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Address</th>
+                        <td>NARAYANAGUDA, HYDERABAD</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth</th>
+                        <td>02/01/2005</td>
+                    </tr>
+                    <tr>
+                        <th>Languages Known</th>
+                        <td>English, Hindi, Telugu</td>
+                    </tr>
+                </table>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Me</h2>
-            <form id="contactForm">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="name" required />
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Your Email</label>
-                    <input type="email" class="form-control" id="email" required />
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Your Message</label>
-                    <textarea class="form-control" id="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
-    </section>
+    </div>
 
-    <footer class="text-center text-white bg-dark py-3">
-        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-    </footer>
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="portfolio.js"></script>
 </body>
 
 </html>
